@@ -9,7 +9,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    color: #333;
+    color: #faf9f9;
     overflow-x: hidden;
     scroll-behavior: smooth;
     background-repeat: no-repeat;
@@ -23,8 +23,7 @@ body {
 header {
     width: 100%;
     height: 60px;
-    color: white;
-    background-image: url("nav\ bg.png"); /* Fully transparent */
+    color: white; 
     background-size: cover;
     background-position: center;
     position: fixed;
@@ -45,8 +44,8 @@ nav {
 
 .logo {
     cursor: pointer;
-    width: 70px;
-    height: 60px;
+    width: 120px;
+    height: 50px;
     border-radius: 10px;
     animation: flip-back 0.6s ease-in-out;
 }
@@ -87,7 +86,7 @@ nav {
 
 .nav-links a {
     text-decoration: none;
-    color: #000000;
+    color: #f8f5f5;
     font-weight: bold;
     font-weight: 500;
     padding: 8px 15px;
@@ -117,7 +116,9 @@ nav {
 }
 
 .nav-links a:hover {
-    color: #f1f1f1;
+    background: linear-gradient(to right, yellow 50%, green 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     transform: scale(1.5);
 }
 
@@ -128,48 +129,39 @@ nav {
 /* Hero Section */
 .hero {
     display: flex;
-    justify-content: center;  /* Center horizontally */
-    align-items: center;      /* Center vertically */             /* Center vertically */
-    height: 100vh;
-    padding: 0 20px;
-    background-image: url("farmdayhomebg.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 100px;
+    background-color: #1a1f32;
     color: #fff;
-    overflow: hidden;
-    position: relative;
-    animation: fade-in 1s ease-out;
 }
 
 .hero-content {
-    max-width: 600px;
-    animation: fade-in-left 1s ease-out;
-    background: transparent;
-    padding: 20px;
-    border-radius: 10px;
-    align-items: center;
-    text-align: center;
+    flex: 1;
+    max-width: 100%;
 }
 
-.hero-contentvid{
-    max-width: auto !important;
-    animation: fade-in-left 1s ease-out;
-    background: rgba(0, 0, 0, 0.6);
-    align-content: center;
-}
-
-.hero h1 {
-    font-size: 6.5rem;
+.hero-content h1 {
+    font-size: 3em;
     margin-bottom: 20px;
-    font-family:'Times New Roman', Times, serif;
 }
 
-.hero p {
-    font-size: 1.2rem;
+.hero-content p {
+    font-size: 1.2em;
     margin-bottom: 30px;
-    animation: fade-in-up 1s ease-out;
 }
+
+.hero-image {
+    flex: 1;
+    max-width: 100%;
+    text-align: right;
+}
+
+.hero-image img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
 
 .hero .btn-primary {
     padding: 10px 30px;
@@ -203,7 +195,7 @@ nav {
     transform: scale(1.05);
 }
 .btn-get-started:hover {
-    background: linear-gradient(135deg, #218838, #28a745);
+    background: linear-gradient(135deg, yellow,green);
     transform: scale(1.05);
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
 }
@@ -215,7 +207,7 @@ nav {
     left: -2px;
     right: -2px;
     bottom: -2px;
-    background: linear-gradient(45deg, #28a745, #d8d8d5, #007bff, #f5a623);
+    background: linear-gradient(45deg, yellow,green);
     z-index: -1;
     border-radius: 50px;
     opacity: 0;
@@ -236,46 +228,6 @@ nav {
 .features h2, .about h2, .installation h2, .usage h2, .video h2, .contact h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-}
-
-.feature-cards {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.feature-card {
-    background: #fff;
-    padding: 20px;
-    margin: 10px;
-    width: 300px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-    animation: bounce-in 0.5s ease-out;
-}
-
-.feature-card:hover {
-    transform: translateY(-10px) rotate(2deg);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.about-content {
-    max-width: 600px;
-    margin: 0 auto;
-    animation: fade-in-left 1s ease-out; /* Apply slide-in animation */
-}
-
-.about-image img {
-    max-width: 100%;
-    height: auto;
-    transform: scale(0.95);
-    transition: transform 0.3s;
-    animation: zoomIn 1s ease-out; /* Apply zoom-in animation */
-}
-
-.about-image img:hover {
-    transform: scale(1);
 }
 
 .video iframe {
@@ -366,9 +318,10 @@ footer {
 }
 
 .btn-language:hover {
-    background-color: #1e824c;
+    background: linear-gradient(45deg, yellow, green); /* Use 'background' instead of 'background-color' */
     color: #f1f1f1;
 }
+
 
 /* Keyframe Animations */
 @keyframes slide-from-logo {
@@ -425,30 +378,28 @@ footer {
 
 .btn-powered {
     display: inline-block;
-    background-color: transparent; /* Adjust color as needed */
-    color: white;
+    background-color: transparent; /* Transparent background */
+    color: white; /* White text */
     padding: 10px 20px;
-    margin-top: 20px; /* Adjust as needed */
+    margin-top: 20px;
     text-decoration: none;
     border-radius: 30px;
-    transition: background-color 0.10s;
-    border-color: white;
-    border-width: 5px;
-    
+    transition: background-color 0.10s, transform 0.2s, box-shadow 0.2s;
+    border: 2px solid white; /* White border */
 }
 
 .btn-powered:hover {
-         background: linear-gradient(45deg, #28a745, #d8d8d5, #007bff, #f5a623);
-        transform: scale(1.05);
-        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
-    
+    background: linear-gradient(45deg, yellow, green); /* Gradient background on hover */
+    transform: scale(1.05); /* Slight scaling on hover */
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3); /* Add shadow */
 }
+
 
 .about {
     position: relative; /* Required for absolute positioning of overlay */
     padding: 80px 20px;
     text-align: center;
-    background-image: url(https://graficsea.com/wp-content/uploads/2022/01/Mountain-Green-Ground.jpg);
+    background-color: #1a1f32;
     background-size: cover; /* Ensure the image covers the whole section */
     background-position: center; /* Center the background image */
     background-repeat: no-repeat; /* Prevent the background image from repeating */
@@ -456,23 +407,6 @@ footer {
     overflow: hidden; /* Prevent overflow from child elements */
 }
 
-/* Transparent white overlay */
-.about::before {
-    content: ""; /* Necessary for pseudo-element */
-    position: absolute; /* Position it over the background */
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(255, 255, 255, 0.5); /* White with 50% transparency */
-    z-index: 1; /* Position it above the background but below the content */
-}
-
-/* Ensure content is above overlay */
-.about-container {
-    position: relative; /* Set relative positioning for content */
-    z-index: 2; /* Keep content above overlay */
-}
 
 /* Background animation */
 @keyframes bg-animation {
@@ -531,27 +465,6 @@ footer {
     
 }
 
-
-.btn-secondary {
-    display: inline-block;
-    padding: 10px 20px;
-    color: #fff;
-    background-color: #27ae60;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-.btn-secondary:hover {
-    background: linear-gradient(45deg, #28a745, #d8d8d5, #007bff, #f5a623);
-    transform: scale(1.05);
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
-    color: black;
-
-}
-
-/* Keyframe Animation */
 
 
 .features {
