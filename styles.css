@@ -42,7 +42,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 0px 20px;
     transition: height 0.5s ease;
     border-radius: 2px;
 }
@@ -407,6 +407,7 @@ nav {
 
 .about {
     animation: bg-animation 15s ease infinite;
+    height: 100%;
     /* Adjust duration for animation speed */
 }
 
@@ -421,6 +422,7 @@ nav {
     /* Center align items vertically */
     max-width: 1200px;
     margin: 0 auto;
+
 
 }
 
@@ -777,7 +779,7 @@ h1 {
 }
 
 .social-container {
-    background-color: #00a4f6;
+    background-color:#46a253;
     padding: 10px;
     border-radius: 5px;
     max-width: 300px;
@@ -807,6 +809,8 @@ h1 {
 
 .contact-img img {
     width: 75%;
+    border-radius: 15px;
+    border-color: #27ae60;
 }
 
 
@@ -816,4 +820,192 @@ footer {
     background: #323541;
     color: #fff;
     text-align: center;
+}
+
+
+/* Media Queries for Responsiveness */
+
+/* For tablets and smaller screens */
+@media (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+        /* Stack items vertically */
+        padding: 50px 20px;
+        /* Reduce padding */
+    }
+
+    .hero-content {
+        text-align: center;
+        /* Center align text */
+    }
+
+    .hero-image {
+        text-align: center;
+        /* Center align image */
+        margin-top: 20px;
+        /* Add space above the image */
+    }
+
+    .about-container {
+        flex-direction: column;
+        /* Stack items vertically */
+        align-items: center;
+        /* Center align */
+    }
+
+
+    .features {
+        height: 90%;
+    }
+
+    .feature-card {
+        width: calc(50% - 20px);
+        /* Two cards per row */
+        margin-bottom: 20px;
+        /* Add spacing between cards */
+    }
+
+    .testimonials {
+        height: 90%;
+    }
+
+    .testimonial-card {
+        width: calc(50% - 20px);
+        /* Two cards per row */
+        margin-bottom: 20px;
+        /* Add spacing between cards */
+    }
+
+    .contact {
+        height: 75vh;
+    }
+
+    .contact-img img {
+        width: 300px;
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        /* Stack header items */
+        height: auto;
+        /* Allow dynamic height */
+    }
+
+    .nav-links {
+        flex-direction: column;
+        /* Stack links vertically */
+        max-width: none;
+        /* Allow full width */
+        display: none;
+        /* Hide by default */
+    }
+
+    .nav-links.active {
+        display: flex;
+        /* Show links when active */
+    }
+
+    .hero-content h1 {
+        font-size: 2em;
+        /* Smaller heading */
+    }
+
+    .hero-content p {
+        font-size: 1em;
+        /* Smaller paragraph */
+    }
+
+    .about-image img {
+        width: 100%;
+        /* Full width for images */
+    }
+
+    .feature-card,
+    .testimonial-card {
+        width: 50%;
+        /* Full width for cards */
+    }
+
+    .btn-get-started {
+        width: 100%;
+        /* Full width for buttons */
+        margin: 10px 0;
+        /* Add spacing */
+    }
+
+    .contact {
+        height: 100vh;
+    }
+
+
+    .contact-img {
+        display: block;
+    }
+
+    .contact-img img {
+        width: 300px;
+    }
+}
+
+/* For very small devices */
+@media (max-width: 480px) {
+    .hero {
+        padding: 30px 10px;
+        /* Further reduce padding */
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+        /* Spacing for vertical links */
+    }
+
+    .contact-info {
+        max-width: 100%;
+        /* Allow full width for contact info */
+    }
+
+    .social-container {
+        max-width: 100%;
+        /* Allow full width */
+    }
+}
+
+@media (max-width: 1024px) {
+    .btn-get-started {
+        padding: 15px 50px;
+        /* Adjust padding */
+        font-size: 1.1rem;
+        /* Adjust font size */
+        margin: 15px 42%;
+        /* Adjust margin */
+        width: 20%;
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+    .btn-get-started {
+        padding: 10px 20px;
+        /* Further adjust padding */
+        font-size: 1.1rem;
+        /* Smaller font size */
+        margin: 10px 42%;
+        /* Adjust margin for mobile */
+        width: 19%;
+    }
+}
+
+/* For very small devices */
+@media (max-width: 480px) {
+    .btn-get-started {
+        padding: 8px 16px;
+        /* Further reduce padding */
+        font-size: 0.9rem;
+        /* Even smaller font size */
+        margin: 5px 10px;
+        /* Adjust margin for small screens */
+    }
 }
